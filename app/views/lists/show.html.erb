@@ -6,7 +6,7 @@
     <li class = "list-group-item">
       <%= bookmark.comment %>
       <%= bookmark.movie.title %>
-      <%= link_to "Destroy", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger justify-content-center" %>
+      <%= link_to "Destroy", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger justify-content-center" %>
     </li>
   <% end %>
 </ul>
