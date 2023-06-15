@@ -3,7 +3,7 @@
 
 <ul class = "list-group">
   <% @bookmarks.each do |bookmark| %>
-    <li class = "list-group-item">
+    <li class = "list-group-item d-flex justify-content-between">
       <%= bookmark.comment %>
       <%= bookmark.movie.title %>
       <%= link_to "Destroy", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger justify-content-center" %>
