@@ -1,0 +1,16 @@
+<div class = "container">
+<h1 class = "text-center markup"><%= @list.name %></h1>
+
+<ul class = "list-group">
+  <% @bookmarks.each do |bookmark| %>
+    <li class = "list-group-item">
+      <%= bookmark.comment %>
+      <%= bookmark.movie.title %>
+      <%= link_to "Destroy", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger justify-content-center" %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add a bookmark", new_list_bookmark_path(@list), class: "btn btn-primary mt-2" %>
+</div>
